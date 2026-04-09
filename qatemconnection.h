@@ -31,11 +31,12 @@ class QHostAddress;
 class QAtemSubsystemBase;
 class QAtemMixEffect;
 class QAtemCameraControl;
-class QAtemDownstreamKey;
 class QAtemFairlight;
 class QAtemSuperSource;
 class QAtemRecording;
 class QAtemStreaming;
+class QAtemDownstreamKey;
+Q_DECLARE_OPAQUE_POINTER(QAtemDownstreamKey*);
 
 class LIBQATEMCONTROLSHARED_EXPORT QAtemConnection : public QObject
 {
@@ -43,11 +44,11 @@ class LIBQATEMCONTROLSHARED_EXPORT QAtemConnection : public QObject
     friend class QAtemSubsystemBase;
     friend class QAtemMixEffect;
     friend class QAtemCameraControl;
-    friend class QAtemDownstreamKey;
     friend class QAtemFairlight;
     friend class QAtemSuperSource;
     friend class QAtemRecording;
-    friend class QAtemStreaming;    
+    friend class QAtemStreaming;
+    friend class QAtemDownstreamKey;
 
     Q_PROPERTY(bool connected READ isConnected NOTIFY connectedChanged)
     Q_PROPERTY(QTime time READ getTime NOTIFY timeChanged)
