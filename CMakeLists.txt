@@ -43,7 +43,7 @@ set(qatemcontrol_sources
 )
 add_library(qatemcontrol SHARED ${qatemcontrol_headers} ${qatemcontrol_sources})
 
-target_include_directories(qatemcontrol PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}>)
+target_include_directories(qatemcontrol PUBLIC $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}> $<INSTALL_INTERFACE:include/QAtemControl>)
 
 target_link_libraries(qatemcontrol PRIVATE Qt6::Core Qt6::Gui Qt6::Network)
 
